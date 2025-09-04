@@ -1,0 +1,82 @@
+/* General Body and Fonts */ 
+body { 
+    font-family: Arial, sans-serif;
+    line-height: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+/* Container for all content */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Main Titles and Headers */
+h1, h2 {
+    color: #00b8d4; /* A vibrant blue color */
+    border-bottom: 2px solid #00b8d4;
+    padding-bottom: 5px;
+
+}
+h2 {
+    margin-top: 40px;
+}
+/* Section Styling */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #2c2c2c;
+}
+/* Project Cards */
+.project {
+    background-color: #3b3b3b;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.project h3 {
+    margin-top: 0;
+    color: #ff9800; /* A nice orange for project titles */
+}
+.project a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Links and Social Media */
+.contact-links a {
+    color: #00b8d4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#scrollToTopBtn {
+    display: none; /* Hide the button by default */
+    position: fixed; /* Keep it in the same position on the screen */
+    bottom: 20px; /* 20 pixels from the bottom */
+    right: 30px; /* 30 pixels from the right */
+    z-index: 99; /* Make sure it's on top of other content */
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
