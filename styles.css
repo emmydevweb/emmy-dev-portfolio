@@ -1,7 +1,6 @@
 /* General Body and Fonts */ 
 body { 
     font-family: Arial, sans-serif;
-    line-height: #1a1a1a;
     color: #f0f0f0;
     line-height: 1.6;
     margin: 0;
@@ -25,6 +24,11 @@ h1, h2 {
 }
 h2 {
     margin-top: 40px;
+}
+.header-subtitle {
+    color: #00b8d4;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 /* Section Styling */
 section {
