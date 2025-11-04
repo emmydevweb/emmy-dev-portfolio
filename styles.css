@@ -15,6 +15,32 @@
     --background-subtle: #e9ecef; /* Subtle off-white/light gray */
 }
 
+/* Prevent horizontal scroll - Add this at the top of styles.css */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Fix container overflow */
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Fix row overflow */
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 /* Base Body and Typography */
 body {
     background-color: var(--background-subtle) !important; 
