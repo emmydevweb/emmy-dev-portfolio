@@ -1,65 +1,51 @@
 /*
 |--------------------------------------------------------------------------
-| EMMY DEV# PROFESSIONAL STYLESHEET - MOBILE OPTIMIZED
+| EMMY DEV# PROFESSIONAL STYLESHEET
 |--------------------------------------------------------------------------
 */
 
 :root {
-    --primary-color: #007bff;
-    --success-color: #28a745;
-    --dark-bg: #212529;
-    --light-bg: #f8f9fa;
-    --text-color: #343a40;
+    --primary-color: #007bff; /* Sharp Blue/Primary Accent */
+    --success-color: #28a745; /* Bootstrap Green (for skills) */
+    --dark-bg: #212529; /* Dark Background for Navbar/Footer */
+    --light-bg: #f8f9fa; /* Light Background for Sections */
+    --text-color: #343a40; /* Dark text */
     --transition-speed: 0.3s;
-    --secondary-color: #6c757d;
-    --background-subtle: #e9ecef;
+    --secondary-color: #6c757d; /* Light Gray/Secondary Accent */
+    --background-subtle: #e9ecef; /* Subtle off-white/light gray */
 }
 
 /* Base Body and Typography */
 body {
-    background-color: var(--background-subtle) !important;
+    background-color: var(--background-subtle) !important; 
+    
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
     line-height: 1.6;
-    scroll-padding-top: 4rem;
-    overflow-x: hidden;
-}
-
-/* Prevent horizontal scroll */
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* Container adjustments for mobile */
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
+    /* Adjusted scroll padding for smaller headers on mobile */
+    scroll-padding-top: 4rem; 
 }
 
 /* |--------------------------------------------------------------------------
 | CRITICAL ICON FIX (Forcing Font Awesome symbols to display)
 |--------------------------------------------------------------------------
 */
+/* The .fab class is for brand icons (LinkedIn, GitHub). We explicitly set the font family. */
 .fab {
     font-family: "Font Awesome 6 Brands" !important;
-    font-weight: 400;
+    font-weight: 400; /* Standard weight for brand icons */
 }
-
+/* The .fas class is for solid icons (arrows, etc.). */
 .fas {
     font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900;
+    font-weight: 900; /* Standard weight for solid icons */
 }
-
+/* Ensure generic <i> tags within links or buttons also inherit icon properties */
 i[class*="fa-"] {
     display: inline-block;
 }
 
 /* --- Navbar Styling --- */
-.navbar {
-    padding: 0.75rem 0;
-}
-
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
@@ -71,7 +57,6 @@ i[class*="fa-"] {
     font-weight: 600;
     text-transform: uppercase;
     transition: color var(--transition-speed);
-    padding: 0.5rem 1rem;
 }
 
 .navbar-nav .nav-link:hover {
@@ -80,7 +65,8 @@ i[class*="fa-"] {
 
 /* --- General Section Styling --- */
 section {
-    padding: 4rem 0;
+    /* Reduced default padding slightly for better flow */
+    padding: 4rem 0; 
 }
 
 .display-5 {
@@ -103,39 +89,12 @@ section {
 /* --- Hero Section Styling --- */
 #hero {
     background-color: #fff;
-    padding: 5rem 0;
+    /* Increased top and bottom padding for spacious feel */
+    padding: 6rem 0; 
 }
-
 #hero .display-3 {
     font-weight: 800;
     color: var(--dark-bg);
-}
-
-/* Profile Image Styling */
-.profile-image {
-    max-width: 400px;
-    width: 100%;
-    border: 5px solid var(--primary-color);
-}
-
-/* Hero buttons container */
-.hero-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-/* Hero button styling */
-.btn-hero {
-    font-size: 0.85rem;
-    padding: 0.6rem 1rem;
-    white-space: nowrap;
-}
-
-/* Hero description text */
-.hero-description {
-    font-size: 0.9rem;
-    line-height: 1.5;
 }
 
 /* --- About Section Styling --- */
@@ -148,10 +107,12 @@ section {
     background-color: var(--background-subtle) !important;
 }
 
-/* --- Projects Section --- */
+
+/* --- Projects Section (Enhanced UI/UX) */
 #projects {
     background-color: #fff !important;
 }
+
 
 /* --- Contact Section --- */
 #contact {
@@ -164,7 +125,6 @@ section {
     border: 1px solid #dee2e6;
     background-color: #fff;
 }
-
 #contact .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
@@ -175,26 +135,24 @@ section {
     font-weight: 500;
 }
 
-/* Contact Icons Styling */
+/* ENHANCEMENT: Styling for Contact Icons - Ensures colors are applied */
 #location-icon {
     color: #dc3545 !important;
     font-size: 2.5rem !important;
 }
-
 #email-icon {
     color: var(--primary-color) !important;
     font-size: 2.5rem !important;
 }
-
 #whatsapp-icon {
     color: var(--success-color) !important;
     font-size: 2.5rem !important;
 }
-
 #contact .card-title {
     color: var(--dark-bg);
     font-weight: 600;
 }
+
 
 /* |--------------------------------------------------------------------------
 | SOCIAL MEDIA ICONS (Icon Fix and Styling)
@@ -208,62 +166,58 @@ section {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* Added a subtle light border for definition */
+    border: 1px solid rgba(0, 0, 0, 0.1); 
 }
 
 .social-icon-btn i {
     font-size: 1.5rem;
     transition: color var(--transition-speed);
-    display: block;
-    line-height: 1;
+    /* Ensuring icon is a block element to properly align inside flex container */
+    display: block; 
+    line-height: 1; /* Helps vertical alignment */
 }
 
-/* Icon colors before hover */
-.btn-outline-primary i { color: var(--primary-color) !important; }
-.btn-outline-info i { color: #0dcaf0 !important; }
-.btn-outline-dark i { color: var(--dark-bg) !important; }
-.btn-outline-success i { color: var(--success-color) !important; }
+/* CRITICAL FIX: Explicitly set the icon colors before hover (Visibility fix) */
+.btn-outline-primary i { color: var(--primary-color) !important; } /* LinkedIn */
+.btn-outline-info i { color: #0dcaf0 !important; } /* Telegram/Info Cyan */
+.btn-outline-dark i { color: var(--dark-bg) !important; } /* GitHub/Twitter */
+.btn-outline-success i { color: var(--success-color) !important; } /* WhatsApp */
+
 
 /* Branded hover colors for social media */
 .btn-outline-primary:hover {
     background-color: #007bff !important;
     color: #fff !important;
 }
-
 .btn-outline-info:hover {
     background-color: #0dcaf0 !important;
     color: #fff !important;
 }
-
 .btn-outline-dark:hover {
-    background-color: #212529 !important;
+    background-color: #212529 !important; 
     color: #fff !important;
 }
-
 .btn-outline-success:hover {
     background-color: var(--success-color) !important;
     color: #fff !important;
 }
-
+/* Ensure the icon changes color on hover */
 .social-icon-btn:hover i {
     color: #fff !important;
 }
+
 
 /* --- Scroll To Top Button --- */
 #scrollToTopBtn {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
-    opacity: 0;
+    opacity: 0.8;
     transition: all var(--transition-speed);
-    position: fixed;
-    bottom: 20px;
+    /* Positioning fix for mobile */
+    bottom: 20px; 
     right: 20px;
     z-index: 1000;
-    width: 45px;
-    height: 45px;
-    display: none;
-    align-items: center;
-    justify-content: center;
 }
 
 #scrollToTopBtn:hover {
@@ -275,272 +229,73 @@ section {
 /* |--------------------------------------------------------------------------
 | RESPONSIVENESS (Media Queries for Mobile/Tablet)
 |--------------------------------------------------------------------------
+| Ensures neat, clear, bold, and well-structured display on all devices.
 */
 
-/* Extra Small devices (320px - 575px) - Small Phones */
-@media (max-width: 575.98px) {
+/* Small devices (up to 767px) - Mobile Phones */
+@media (max-width: 767.98px) {
+    
     /* Global Adjustments */
     section {
-        padding: 2.5rem 0;
+        /* Reduce vertical space on phones */
+        padding: 3rem 0; 
     }
     
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    
-    /* Hero Section */
-    #hero {
-        padding: 3rem 0;
-    }
-    
+    /* Hero Section Specifics */
     #hero .display-3 {
-        font-size: 2rem;
+        /* Reduce the main heading size for mobile */
+        font-size: 2.5rem; 
         text-align: center;
-        margin-bottom: 1rem;
     }
-    
     #hero h2 {
-        font-size: 1rem;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    
-    #hero .lead {
-        font-size: 0.95rem;
+        /* Reduce subheading size */
+        font-size: 1.25rem; 
         text-align: center;
     }
-    
-    #hero .badge {
-        font-size: 0.85rem;
-    }
-    
-    /* Profile Image */
-    .profile-image {
-        max-width: 280px;
-        margin: 2rem auto 0;
-        border-width: 3px;
-    }
-    
-    /* Buttons in Hero */
-    #hero .btn {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
-        width: 100%;
-    }
-    
-    /* Section Titles */
-    .display-5 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    
-    .h4, h4 {
-        font-size: 1.1rem;
-    }
-    
-    /* Cards */
-    .card {
-        margin-bottom: 1.5rem;
-    }
-    
-    .card-body {
-        padding: 1.5rem 1rem;
-    }
-    
-    /* Service Cards Icons */
-    .card .fa-3x {
-        font-size: 2rem !important;
-    }
-    
-    /* Project Cards */
-    #projects .card {
-        margin-bottom: 1.5rem;
-    }
-    
-    /* Skills Section Progress Bars */
-    #skills .progress {
-        height: 10px !important;
-    }
-    
-    #skills p {
-        font-size: 0.9rem;
-    }
-    
-    /* Contact Section */
-    #contact .card {
-        margin-bottom: 1rem;
-    }
-    
-    #contact .fa-2x {
-        font-size: 2rem !important;
-    }
-    
-    /* Form Elements */
-    .form-control-lg {
-        font-size: 0.95rem;
-        padding: 0.6rem 0.8rem;
-    }
-    
-    /* Social Media Icons */
-    .social-icon-btn {
-        width: 45px;
-        height: 45px;
-        margin: 0.25rem;
-    }
-    
-    .social-icon-btn i {
-        font-size: 1.2rem;
-    }
-    
-    /* Footer */
-    footer {
-        padding: 1.5rem 0;
-    }
-    
-    footer p {
-        font-size: 0.75rem;
-    }
-    
-    /* Navbar */
-    .navbar-brand {
-        font-size: 1.25rem;
-    }
-    
-    .navbar-nav .nav-link {
-        font-size: 0.9rem;
-        padding: 0.6rem 0;
-    }
-    
-    /* Scroll to Top Button */
-    #scrollToTopBtn {
-        width: 40px;
-        height: 40px;
-        bottom: 15px;
-        right: 15px;
-    }
-    
-    #scrollToTopBtn i {
-        font-size: 1rem;
-    }
-    
-    /* Expertise List Items */
-    .list-group-item {
-        font-size: 0.9rem;
-        padding: 0.75rem 0.5rem;
-    }
-    
-    /* Badges in Skills */
-    .badge {
-        font-size: 0.75rem;
-        margin-bottom: 0.25rem;
-    }
-}
 
-/* Small devices (576px - 767px) - Large Phones */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    section {
-        padding: 3rem 0;
-    }
-    
-    #hero .display-3 {
-        font-size: 2.5rem;
-        text-align: center;
-    }
-    
-    #hero h2 {
-        font-size: 1.15rem;
-        text-align: center;
-    }
-    
-    .profile-image {
-        max-width: 320px;
-        margin: 2rem auto 0;
-    }
-    
+    /* Section Titles */
     .display-5 {
         font-size: 1.75rem;
     }
-    
-    #hero .btn {
-        font-size: 0.95rem;
+    .display-5::after {
+        /* Center the separator line under the title on mobile */
+        margin-left: auto;
+        margin-right: auto;
     }
+
+    /* Profile Picture (If needed, ensure it stacks well with Bootstrap's grid) */
+    /* This assumes the image is in a column that stacks on mobile */
+
+    /* Contact Cards */
+    #contact .card {
+        /* Add more space between stacked cards on mobile */
+        margin-bottom: 1.5rem; 
+    }
+
+    /* Footer */
+    footer p {
+        /* Reduce footer text size */
+        font-size: 0.8rem; 
+    }
+
+    /* Navbar behavior (Bootstrap handles most of this, but ensure padding is small) */
+    .navbar {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
 }
 
-/* Medium devices (768px - 991px) - Tablets */
+/* Medium devices (768px to 991px) - Tablets */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    section {
-        padding: 3.5rem 0;
-    }
     
-    #hero {
-        padding: 4rem 0;
-    }
-    
-    #hero .display-3 {
-        font-size: 2.75rem;
-    }
-    
-    #hero h2 {
-        font-size: 1.25rem;
-    }
-    
-    .profile-image {
-        max-width: 350px;
-    }
-    
-    .display-5 {
-        font-size: 2rem;
-    }
-    
-    .text-md-start {
-        text-align: left !important;
-    }
-}
-
-/* Large devices (992px - 1199px) - Small Desktops */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Hero Section */
     #hero .display-3 {
         font-size: 3rem;
     }
-    
-    .profile-image {
-        max-width: 380px;
-    }
-}
 
-/* Animation improvements for mobile */
-@media (max-width: 767.98px) {
-    [data-aos] {
-        transition-duration: 0.6s !important;
-    }
-}
-
-/* Ensure images don't overflow */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Better spacing for mobile buttons */
-@media (max-width: 575.98px) {
-    .btn-lg {
-        padding: 0.7rem 1.5rem;
-        font-size: 0.95rem;
-    }
-    
-    .gap-2 {
-        gap: 0.5rem !important;
-    }
-}
-
-/* Improved card hover effects on mobile */
-@media (hover: none) {
-    .card:hover {
-        transform: none;
-    }
-    
-    #contact .card:hover {
-        transform: none;
+    /* Ensure text alignment is good on tablet view */
+    .text-md-start {
+        text-align: left !important;
     }
 }
