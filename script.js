@@ -20,9 +20,15 @@
     }
 
     // ---- INIT AOS if available ----
-    if (window.AOS) {
-      AOS.init({ duration: 700, once: true, offset: 120 });
-    }
+if (window.AOS) {
+  AOS.init({ 
+    duration: 800,
+    once: false, // Changed from true to false
+    offset: 100,
+    mirror: true,
+    easing: 'ease-in-out'
+  });
+}
 
     // ---- SMOOTH SCROLL for internal anchors (compensate for sticky nav) ----
     const navbar = document.querySelector('.navbar');
